@@ -1,0 +1,24 @@
+<app-header></app-header>
+
+<header class="bg-white shadow">
+  <div class="max-w-7xl mx-auto py-4 px-2 sm:px-6 lg:px-6">
+    <h1 class="text-3xl font-bold text-gray-900">Welcome to DigiViz app. </h1>
+    <div class="flex items-center text-gray-900" style="color: gray">
+      <div class="ml-1.5 leading-6 truncate text-gray">Here, you will find the volume of searches on Google.</div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+    <div class="px-4 py-6 sm:px-0">
+
+      <div class="border-4 border-dashed border-gray-200 rounded-lg px-4 py-6">
+
+        <app-chart [options]="options"></app-chart>
+      </div>
+    </div>
+  </div>
+</main>
+
+
