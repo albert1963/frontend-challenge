@@ -152,9 +152,4 @@ export class DashboardComponent implements OnInit {
     })
   }
 
-  onChangeCategory(event: any){
-    this.readByCategory(event.target?.value?.toString())
-  }
-
-
 }
