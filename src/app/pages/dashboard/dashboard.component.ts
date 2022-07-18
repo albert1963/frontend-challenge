@@ -18,7 +18,16 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     // @ts-ignore
-    this.utilServ.readFile("../../../assets/api/volumes/250162.json").subscribe((volumes : Volume[]) => {
+    this.utilServ.readFile("../../../assets/api/categories.json").subscribe((categories : Category[]) => {
+     this.categories = categories;
+
+     this.readByCategory('250162')
+    })
+  }
+
+  readByCategory(catId = ''){
+    // @ts-ignore
+    this.utilServ.readFile("../../../assets/api/volumes/"+catId+".json").subscribe((volumes : Volume[]) => {
       // @ts-ignore
       const data:  number[] = volumes.map(volume => volume.volume);
       // @ts-ignore
@@ -66,6 +75,10 @@ export class DashboardComponent implements OnInit {
       }
 
     })
+  }
+
+  onChangeCategory(event: any){
+    this.readByCategory(event.target?.value?.toString())
   }
 
 
