@@ -5,6 +5,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent} from "./dashboard.component";
 import {ChartModule} from "../../component/chart/chart.module";
 import {HeaderModule} from "../../component/header/header.module";
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 
@@ -15,7 +16,8 @@ import {HeaderModule} from "../../component/header/header.module";
         CommonModule,
         DashboardRoutingModule,
         ChartModule,
-        HeaderModule
+        HeaderModule,
+        ReactiveFormsModule
     ]
 })
 export class DashboardModule {
