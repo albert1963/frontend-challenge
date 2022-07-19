@@ -30,7 +30,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     // @ts-ignore
-    this.utilServ.readFile("../../../assets/api/categories.json").subscribe((categories : Category[]) => {
+    this.utilServ.readFile("assets/api/categories.json").subscribe((categories : Category[]) => {
       this.categories = categories;
 
       this.readByCategory( true) // firstCall of the function.
@@ -52,7 +52,7 @@ export class DashboardComponent implements OnInit {
 
 
     // @ts-ignore
-    this.utilServ.readFile("../../../assets/api/volumes/"+catId+".json").subscribe((volumes : Volume[]) => {
+    this.utilServ.readFile("assets/api/volumes/"+catId+".json").subscribe((volumes : Volume[]) => {
 
       if(volumes.length > 0){
         // We need to fetch all the years in order to display it in a select option. However, we just have to do this one time
